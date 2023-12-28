@@ -37,7 +37,7 @@ export default function Hola() {
       //
       const response = mock
         ? getRandomSideRotation()
-        : await fetch('https://', {
+        : await fetch(process.env.NEXT_PUBLIC_LAMBDA_FUNCTION_ROUTE ?? '', {
             headers: {
               'Content-Type': 'application/json',
             },
