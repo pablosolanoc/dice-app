@@ -30,7 +30,6 @@ export default function Hola() {
   const rotate = async () => {
     setDisableClick(true);
     try {
-      debugger;
       // So animations start immediately
       setBasicRotations({ x: 100, y: 100, z: 100 });
       setCompleteRotations({ x: 100, y: 100, z: 100 });
