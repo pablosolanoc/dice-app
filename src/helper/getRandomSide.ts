@@ -42,9 +42,9 @@ const rotations: { [key: number]: rotationType } = {
 
 const getCompleteRotations = (basicRotation: rotationType): rotationType => {
   return {
-    x: Math.PI * (1 / 2) * (basicRotation.x + 1.5 * x) + 0.2,
-    y: Math.PI * (1 / 2) * (basicRotation.y + 1.5 * x) + 0.2,
-    z: Math.PI * (1 / 2) * (basicRotation.z + 1.5 * x) + 0.2,
+    x: Math.PI * (1 / 2) * (basicRotation.x + 1.0 * x),
+    y: Math.PI * (1 / 2) * (basicRotation.y + 1.0 * x),
+    z: Math.PI * (1 / 2) * (basicRotation.z + 1.0 * x),
   };
 };
 
@@ -58,9 +58,9 @@ export const getRandomSideRotation = () => {
 
   return {
     basicRotations: {
-      x: quarterPeriod * basicRotations.x + 0.2,
-      y: quarterPeriod * basicRotations.y + 0.2,
-      z: quarterPeriod * basicRotations.z + 0.2,
+      x: quarterPeriod * basicRotations.x,
+      y: quarterPeriod * basicRotations.y,
+      z: quarterPeriod * basicRotations.z,
     },
     completeRotations,
   };
