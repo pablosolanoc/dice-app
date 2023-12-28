@@ -42,9 +42,9 @@ const rotations: { [key: number]: rotationType } = {
 
 const getCompleteRotations = (basicRotation: rotationType): rotationType => {
   return {
-    x: Math.PI * (1 / 2) * (basicRotation.x + 1.0 * x),
-    y: Math.PI * (1 / 2) * (basicRotation.y + 1.0 * x),
-    z: Math.PI * (1 / 2) * (basicRotation.z + 1.0 * x),
+    x: quarterPeriod * (basicRotation.x + 1.0 * x),
+    y: quarterPeriod * (basicRotation.y + 1.0 * x),
+    z: quarterPeriod * (basicRotation.z + 1.0 * x),
   };
 };
 
