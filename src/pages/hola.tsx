@@ -46,11 +46,12 @@ export default function Hola() {
 
       const { basicRotations: bRotations, completeRotations: cRotations } =
         body;
+
       setBasicRotations(bRotations);
       setCompleteRotations(cRotations);
     } catch (error) {
       setDisableClick(false);
-      console.log(error);
+      cancelRotation();
     }
   };
 
@@ -156,16 +157,6 @@ const Box = ({
           meshZ > completeRotations.z
         ) {
           cancelRotation();
-
-          console.log(
-            `Difference X: ${completeRotations.x} - ${myMesh.current.rotation.x}`
-          );
-          console.log(
-            `Difference Y: ${completeRotations.y} - ${myMesh.current.rotation.y}`
-          );
-          console.log(
-            `Difference Z: ${completeRotations.z} - ${myMesh.current.rotation.z}`
-          );
 
           myMesh.current.rotation.x = basicRotations.x;
           myMesh.current.rotation.y = basicRotations.y;

@@ -50,11 +50,8 @@ const getCompleteRotations = (basicRotation: rotationType): rotationType => {
 
 export const getRandomSideRotation = () => {
   const random = (Math.floor(Math.random() * 100) % 6) + 1;
-  console.log({ random });
   const basicRotations = rotations[`${random}`];
   const completeRotations = getCompleteRotations(basicRotations);
-
-  console.log({ basicRotations, completeRotations });
 
   return {
     basicRotations: {
