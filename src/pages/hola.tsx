@@ -142,13 +142,13 @@ const Box = ({
         const y = (mouse.y * viewport.height) / 2.5;
         myMesh?.current?.lookAt(x, y, 1);
       } else if (basicRotations && completeRotations) {
-        if (meshX < completeRotations.x) {
+        if (meshX <= completeRotations.x) {
           myMesh.current.rotation.x = meshX + 0.04;
         }
-        if (meshY < completeRotations.y) {
+        if (meshY <= completeRotations.y) {
           myMesh.current.rotation.y = meshY + 0.04;
         }
-        if (meshZ < completeRotations.z) {
+        if (meshZ <= completeRotations.z) {
           myMesh.current.rotation.z = meshZ + 0.04;
         }
         if (
