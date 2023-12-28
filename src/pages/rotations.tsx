@@ -18,7 +18,7 @@ import * as Three from 'three';
 
 const mock = false;
 
-export default function Hola() {
+export default function Rotations() {
   const [basicRotations, setBasicRotations] = useState<rotationType | null>(
     null
   );
